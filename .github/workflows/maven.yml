@@ -18,12 +18,13 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Build with Maven
+    - name: run our application
       run: cd ./app && java -jar rest.jar
  
   testing:
 
     runs-on: ubuntu-18.04
+    needs: [before-test]
 
     steps:
     - name: Build with Maven
