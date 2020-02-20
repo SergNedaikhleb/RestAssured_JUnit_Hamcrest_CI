@@ -18,15 +18,15 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: run student application
-      run: cd ./app/ && java -jar rest.jar
+    
 
  my_testing:
    runs-on: [ubuntu-16.04]
    needs: [before_testing]
    
    steps:
-     
+   - name: run student application
+     run: cd ./app/ && java -jar rest.jar  
    - name: list current folder
      run: ls -la  
   
