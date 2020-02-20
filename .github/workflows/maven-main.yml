@@ -7,7 +7,7 @@ on:
     
 
 jobs:
-  before_testing:
+ before_testing:
     runs-on: [ubuntu-16.04]
 
     steps:
@@ -19,10 +19,12 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: run student application
-      run: cd ./app/ $$ java -jar rest.jar
+      run: cd ./app/ && java -jar rest.jar
 
-  testing:
-     runs-on: [ubuntu-16.04]
-     needs: [before_testing]
+ my_testing:
+   runs-on: [ubuntu-16.04]
+   needs: [before_testing]
  
-  steps:
+   steps:
+    - name: Print Hello
+      run: echo "Hello!"
