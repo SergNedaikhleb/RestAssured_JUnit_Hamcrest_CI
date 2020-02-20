@@ -1,6 +1,9 @@
 name: Java CI
 
-on: [push]
+on: 
+  push:
+    branches:
+      - master
 
 jobs:
   before-test:
@@ -18,7 +21,7 @@ jobs:
     - name: Build with Maven
       run: cd ./app && java -jar rest.jar
  
- build:
+  testing:
 
     runs-on: ubuntu-18.04
 
