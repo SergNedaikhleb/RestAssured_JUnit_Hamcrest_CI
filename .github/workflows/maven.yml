@@ -22,13 +22,6 @@ jobs:
       run: chmod +x ./app/rest.jar
     - name: run our application
       run: cd ./app && java -jar rest.jar --server.port=8095
- 
-  testing:
-
-    runs-on: [ubuntu-18.04]
-    needs: [before-test]
-
-    steps:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
       
