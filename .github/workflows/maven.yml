@@ -21,7 +21,7 @@ jobs:
     - name: grant
       run: chmod +x ./app/rest.jar
     - name: run our application
-      run: cd ./app && java -jar rest.jar
+      run: cd ./app && java -jar rest.jar --server.port=8095
  
   testing:
 
