@@ -18,6 +18,8 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
+    - name: copepaste jar
+      uses: cp app/rest.jar /home/rest.jar
     - name: run rest.jar for testing
       run: java -jar app/rest.jar
     - name: run our application 
@@ -26,3 +28,4 @@ jobs:
       
       
       
+COPY testprj-1.0-SNAPSHOT.jar /home/testprj-1.0-SNAPSHOT.jar
