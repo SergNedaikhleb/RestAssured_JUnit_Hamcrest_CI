@@ -26,6 +26,4 @@ jobs:
       run: mvn -B package --file pom.xml 
 
       
-      
-      
-COPY testprj-1.0-SNAPSHOT.jar /home/testprj-1.0-SNAPSHOT.jar
+  
