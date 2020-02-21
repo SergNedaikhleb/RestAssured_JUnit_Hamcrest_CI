@@ -18,18 +18,11 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: grant
-      run: chmod +x ./app/rest.jar
-    - name: run our application
-      run: cd ./app && java -jar rest.jar --server.port=8095
-   
-  testing:
-    runs-on: [ubuntu-18.04]
-    needs: [before-test]
+    - name: run rest.jar for testing
+      run: java -jar app/rest.jar
+    - name: run our application 
+      run: mvn -B package --file pom.xml 
 
-    steps:
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
       
       
       
