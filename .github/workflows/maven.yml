@@ -20,7 +20,7 @@ jobs:
         java-version: 1.8
     
     - name: copypaste jar
-      uses: cp app/rest.jar /home/rest.jar
+      run: cp app/rest.jar /home/rest.jar
     - name: run rest.jar for testing
       run: java -jar app/rest.jar
     - name: run our application 
