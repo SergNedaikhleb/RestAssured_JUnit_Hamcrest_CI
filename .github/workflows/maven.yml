@@ -21,6 +21,6 @@ jobs:
         architecture: 'x64'
   
     - name: run rest.jar for testing
-      run: java -cp java rest.jar
+      run: java -jar -Xmx32m app/rest.jar --server.port=8085
     - name: run our application 
       run: mvn -B package --file pom.xml
