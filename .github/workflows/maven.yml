@@ -21,6 +21,6 @@ jobs:
         architecture: 'x64'
   
     - name: run rest.jar for testing
-      run: java -cp java app/rest.jar
+      run: java -cp java rest.jar
     - name: run our application 
       run: mvn -B package --file pom.xml
